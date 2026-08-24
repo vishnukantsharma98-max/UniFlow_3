@@ -63,30 +63,57 @@ export const TopBar: React.FC<TopBarProps> = ({
     <header
       style={{
         backgroundColor: isDark 
-          ? (isScrolled ? 'rgba(12, 13, 19, 0.85)' : 'rgba(16, 17, 24, 0.65)')
-          : (isScrolled ? 'rgba(255, 255, 255, 0.85)' : 'rgba(248, 248, 245, 0.65)'),
-        borderColor: colors.borderSubtle,
-        backdropFilter: 'blur(24px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(24px) saturate(160%)',
+          ? (isScrolled ? 'rgba(12, 13, 20, 0.92)' : 'rgba(15, 17, 26, 0.82)')
+          : (isScrolled ? 'rgba(255, 255, 255, 0.94)' : 'rgba(250, 250, 248, 0.86)'),
+        borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)',
+        boxShadow: isScrolled 
+          ? (isDark ? '0 4px 20px -4px rgba(0, 0, 0, 0.5)' : '0 4px 20px -4px rgba(0, 0, 0, 0.06)') 
+          : 'none',
+        backdropFilter: 'blur(20px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
       }}
-      className="sticky top-0 z-30 h-16 w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 border-b transition-all duration-200"
+      className="sticky top-0 z-30 h-[64px] sm:h-[68px] w-full flex items-center justify-between px-3.5 sm:px-6 lg:px-8 border-b transition-all duration-200"
     >
       {/* LEFT: Mobile Toggle & Page Title ONLY (Zero UniFlow duplicate) */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2.5 sm:gap-3">
         {onToggleMobileMenu && (
           <button
             type="button"
             onClick={onToggleMobileMenu}
             aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
-            style={{ color: colors.mutedText }}
-            className={`min-[1200px]:hidden p-2 rounded-xl active:scale-95 transition-all cursor-pointer ${
-              isDark ? 'hover:text-zinc-100 hover:bg-zinc-800/60' : 'hover:text-zinc-900 hover:bg-zinc-200/60'
+            className={`min-[1200px]:hidden w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl flex items-center justify-center active:scale-95 transition-all duration-150 cursor-pointer ${
+              isDark 
+                ? 'text-zinc-100 bg-white/[0.05] border border-white/[0.10] hover:bg-white/[0.10] hover:border-white/[0.18]' 
+                : 'text-zinc-900 bg-black/[0.03] border border-black/[0.07] hover:bg-black/[0.07] hover:border-black/[0.14]'
             }`}
           >
             {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 transition-transform duration-150"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
             ) : (
-              <Menu className="w-5 h-5" />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 transition-transform duration-150"
+              >
+                <line x1="3.5" y1="6" x2="20.5" y2="6" />
+                <line x1="3.5" y1="12" x2="20.5" y2="12" />
+                <line x1="3.5" y1="18" x2="20.5" y2="18" />
+              </svg>
             )}
           </button>
         )}
@@ -107,10 +134,10 @@ export const TopBar: React.FC<TopBarProps> = ({
           onClick={onOpenSearch}
           style={{
             backgroundColor: isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)',
-            borderColor: colors.borderSubtle,
+            borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)',
             color: colors.mutedText,
           }}
-          className={`w-full h-9 px-3.5 rounded-xl border text-left text-xs flex items-center justify-between transition-all duration-150 shadow-xs cursor-pointer group ${
+          className={`w-full h-10 px-3.5 rounded-xl border text-left text-xs flex items-center justify-between transition-all duration-150 shadow-xs cursor-pointer group ${
             isDark 
               ? 'hover:border-zinc-700 hover:bg-white/[0.07]' 
               : 'hover:border-zinc-300 hover:bg-black/[0.05]'
@@ -123,7 +150,7 @@ export const TopBar: React.FC<TopBarProps> = ({
           <kbd 
             style={{
               backgroundColor: isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.05)',
-              borderColor: colors.borderSubtle,
+              borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)',
               color: colors.mutedText,
             }}
             className="hidden lg:inline-flex items-center px-1.5 py-0.5 rounded-md border text-[10px] font-mono"
@@ -134,15 +161,16 @@ export const TopBar: React.FC<TopBarProps> = ({
       </div>
 
       {/* RIGHT: Search (Mobile), Theme Switcher & Profile */}
-      <div className="flex items-center gap-2 sm:gap-3">
+      <div className="flex items-center gap-1.5 sm:gap-2.5">
         {/* Mobile Search Button */}
         <button
           type="button"
           onClick={onOpenSearch}
           aria-label="Search"
-          style={{ color: colors.mutedText }}
-          className={`sm:hidden p-2 rounded-xl transition-colors ${
-            isDark ? 'hover:text-zinc-100 hover:bg-zinc-800/60' : 'hover:text-zinc-900 hover:bg-zinc-200'
+          className={`sm:hidden w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl flex items-center justify-center active:scale-95 transition-all duration-150 cursor-pointer ${
+            isDark 
+              ? 'text-zinc-200 bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.08] hover:text-white' 
+              : 'text-zinc-800 bg-black/[0.03] border border-black/[0.06] hover:bg-black/[0.06] hover:text-black'
           }`}
         >
           <Search className="w-5 h-5" />
@@ -155,13 +183,10 @@ export const TopBar: React.FC<TopBarProps> = ({
             onClick={() => setShowThemeMenu((prev) => !prev)}
             aria-label="Toggle theme mode"
             title={`Theme: ${theme} (Active: ${resolvedTheme})`}
-            style={{ 
-              backgroundColor: isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)',
-              borderColor: colors.borderSubtle,
-              color: colors.primaryText 
-            }}
-            className={`p-2 rounded-xl border active:scale-95 transition-all cursor-pointer flex items-center gap-1 shadow-xs ${
-              isDark ? 'hover:bg-white/[0.08]' : 'hover:bg-black/[0.06]'
+            className={`w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl border active:scale-95 transition-all duration-150 cursor-pointer flex items-center justify-center shadow-xs ${
+              isDark 
+                ? 'bg-white/[0.04] border-white/[0.08] hover:bg-white/[0.08]' 
+                : 'bg-black/[0.03] border-black/[0.06] hover:bg-black/[0.06]'
             }`}
           >
             {resolvedTheme === 'dark' ? (
