@@ -63,8 +63,8 @@ export const TopBar: React.FC<TopBarProps> = ({
     <header
       style={{
         backgroundColor: isDark 
-          ? (isScrolled ? 'rgba(12, 13, 20, 0.92)' : 'rgba(15, 17, 26, 0.82)')
-          : (isScrolled ? 'rgba(255, 255, 255, 0.94)' : 'rgba(250, 250, 248, 0.86)'),
+          ? (isScrolled ? 'rgba(12, 13, 20, 0.92)' : 'rgba(15, 17, 26, 0.85)')
+          : (isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(250, 250, 248, 0.90)'),
         borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)',
         boxShadow: isScrolled 
           ? (isDark ? '0 4px 20px -4px rgba(0, 0, 0, 0.5)' : '0 4px 20px -4px rgba(0, 0, 0, 0.06)') 
@@ -72,7 +72,7 @@ export const TopBar: React.FC<TopBarProps> = ({
         backdropFilter: 'blur(20px) saturate(180%)',
         WebkitBackdropFilter: 'blur(20px) saturate(180%)',
       }}
-      className="sticky top-0 z-30 h-[64px] sm:h-[68px] w-full flex items-center justify-between px-3.5 sm:px-6 lg:px-8 border-b transition-all duration-200"
+      className="sticky top-0 z-30 h-[58px] sm:h-[62px] w-full flex items-center justify-between px-3.5 sm:px-6 lg:px-8 border-b transition-all duration-200"
     >
       {/* LEFT: Mobile Toggle & Page Title ONLY (Zero UniFlow duplicate) */}
       <div className="flex items-center gap-2.5 sm:gap-3">
