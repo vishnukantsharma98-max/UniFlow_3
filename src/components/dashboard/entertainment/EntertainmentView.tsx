@@ -15,8 +15,8 @@ export const EntertainmentView: React.FC = () => {
   const { openProtectedResource } = usePasswordGate();
 
   const entertainmentResource = {
-    title: 'TBCPL',
-    url: 'https://tbcpl.lol/',
+    title: 'FMHY',
+    url: 'https://fmhy.net/video',
     description: 'Movies, Shows, Web Series, Anime, Manga, Live TV & Sports, Apps',
   };
 

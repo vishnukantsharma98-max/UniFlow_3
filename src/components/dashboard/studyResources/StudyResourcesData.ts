@@ -493,10 +493,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Targeted DSA series for top product-based company interviews.',
     category: 'dsa',
     categoryLabel: 'Data Structures & Algorithms',
-    url: 'https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6BWCBclmOqcBRtzT2',
+    url: 'https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt',
   },
 
-  // 6. OBJECT-ORIENTED PROGRAMMING (OOP) (Exact 5 Provided Resources)
+  // 6. OBJECT-ORIENTED PROGRAMMING (OOP) (Exact Provided Resources)
   {
     id: 'oops-love-babbar',
     title: 'OOPs in C++ Complete',
@@ -504,7 +504,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Intense one-shot style video covering OOPs concepts for interviews.',
     category: 'oops',
     categoryLabel: 'Object-Oriented Programming',
-    url: 'https://www.youtube.com/watch?v=b3ZjzyaZHIQ',
+    url: 'https://www.youtube.com/watch?v=JeYx8vJB75Q',
   },
   {
     id: 'oops-freecodecamp',
@@ -533,17 +533,8 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     categoryLabel: 'Object-Oriented Programming',
     url: 'https://www.youtube.com/watch?v=BSVKUk58K6U',
   },
-  {
-    id: 'oops-gate-smashers',
-    title: 'OOPs Concepts Playlist',
-    channelOrAuthor: 'Gate Smashers',
-    description: 'Perfect playlist for semester exams and theoretical OOPs topics.',
-    category: 'oops',
-    categoryLabel: 'Object-Oriented Programming',
-    url: 'https://www.youtube.com/playlist?list=PLxCzCOWd7aiEBQ7XQ2jFwSDR8b43T-B8x',
-  },
 
-  // 7. DATABASE MANAGEMENT SYSTEMS (DBMS) (Exact 5 Provided Resources)
+  // 7. DATABASE MANAGEMENT SYSTEMS (DBMS) (Exact Provided Resources)
   {
     id: 'dbms-gate-smashers',
     title: 'DBMS Complete Playlist',
@@ -560,7 +551,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'High-quality, academic-level lectures on relational databases.',
     category: 'dbms',
     categoryLabel: 'DBMS',
-    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRi_CUQ-FXxgzKQ1dqrwAS6w',
+    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRiyryTrbKHX1Sh9luYI0dhX',
   },
   {
     id: 'dbms-jennys-lectures',
@@ -578,7 +569,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'In-depth coverage of normal forms, SQL, and transaction management.',
     category: 'dbms',
     categoryLabel: 'DBMS',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe11Q649-1m9A0E3L301pI850',
+    url: 'https://www.youtube.com/watch?v=YRnjGeQbsHQ&list=PLmXKhU9FNesR1rSES7oLdJaNFgmuj0SYV',
   },
   {
     id: 'dbms-freecodecamp',
@@ -590,7 +581,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     url: 'https://www.youtube.com/watch?v=ztHopE5Wnpc',
   },
 
-  // 8. OPERATING SYSTEMS (Exact 5 Provided Resources)
+  // 8. OPERATING SYSTEMS (Exact Provided Resources)
   {
     id: 'os-gate-smashers',
     title: 'Operating System',
@@ -625,7 +616,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Detailed university-level operating systems lectures.',
     category: 'operating-systems',
     categoryLabel: 'Operating Systems',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe129HkQ_Qp950bZk2s1z_LmA',
+    url: 'https://www.youtube.com/watch?v=009FHqBo87Q&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD',
   },
   {
     id: 'os-love-babbar',
@@ -634,10 +625,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'A great summary of OS topics tailored specifically for placement interviews.',
     category: 'operating-systems',
     categoryLabel: 'Operating Systems',
-    url: 'https://www.youtube.com/watch?v=5rTFO82_jXg',
+    url: 'https://www.youtube.com/watch?v=_TpOHMCODXo&list=PLDzeHZWIZsTr3nwuTegHLa2qlI81QweYG',
   },
 
-  // 9. COMPUTER NETWORKS (Exact 5 Provided Resources)
+  // 9. COMPUTER NETWORKS (Exact Provided Resources)
   {
     id: 'cn-gate-smashers',
     title: 'Computer Networks',
@@ -654,7 +645,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Extremely professional breakdown of the OSI model and protocols.',
     category: 'computer-networks',
     categoryLabel: 'Computer Networks',
-    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAGOsZRv1vH-3729_aQ',
+    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx',
   },
   {
     id: 'cn-freecodecamp',
@@ -672,7 +663,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'In-depth syllabus coverage for engineering CN courses.',
     category: 'computer-networks',
     categoryLabel: 'Computer Networks',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe11d0R_F_Hj4261yWkFm74zE',
+    url: 'https://www.youtube.com/watch?v=q3Z3Qa1UNBA&list=PLmXKhU9FNesSjFbXSZGF8JF_4LVwwofCd',
   },
   {
     id: 'cn-networkchuck',
@@ -684,7 +675,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     url: 'https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P',
   },
 
-  // 10. COMPUTER ORGANIZATION & ARCHITECTURE (COA) (Exact 5 Provided Resources)
+  // 10. COMPUTER ORGANIZATION & ARCHITECTURE (COA) (Exact Provided Resources)
   {
     id: 'coa-gate-smashers',
     title: 'Computer Architecture',
@@ -701,7 +692,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Detailed hardware and architecture logic tutorials.',
     category: 'coa',
     categoryLabel: 'COA',
-    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRgLLlzdgiTUKULKJha3itB_',
+    url: 'https://www.youtube.com/watch?v=Ol8D69VKX2k&list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q',
   },
   {
     id: 'coa-knowledge-gate',
@@ -710,7 +701,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Extensive coverage of microprocessors, pipelines, and memory hierarchy.',
     category: 'coa',
     categoryLabel: 'COA',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe10Vb7-W-hKkK9R10JbZtU-w',
+    url: 'https://www.youtube.com/watch?v=DsK35f8wyUw&list=PLmXKhU9FNesS4B30OmgxP7nrzq1UhiMiv',
   },
   {
     id: 'coa-education-4u',
@@ -719,7 +710,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Classic whiteboard lectures for semester exam preparation.',
     category: 'coa',
     categoryLabel: 'COA',
-    url: 'https://www.youtube.com/playlist?list=PLrjkTql3jnm8CGjsN0r1pB-gD-_X2m-X2',
+    url: 'https://www.youtube.com/watch?v=v4O2cj3Oe0A&list=PLrjkTql3jnm8AcFgkc5TE_yQgeHEuKYrG',
   },
   {
     id: 'coa-well-academy',
@@ -728,10 +719,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Comprehensive playlist covering core organization topics.',
     category: 'coa',
     categoryLabel: 'COA',
-    url: 'https://www.youtube.com/playlist?list=PLJ5C_6qdAvBEp6x4s2Y3YF8A9S8aX1c_o',
+    url: 'https://www.youtube.com/watch?v=NV9QD40vgLU&list=PL9zFgBale5fsVaOVUqXA1cJ22ePKpDEim',
   },
 
-  // 11. THEORY OF COMPUTATION (TOC) / AUTOMATA (Exact 5 Provided Resources)
+  // 11. THEORY OF COMPUTATION (TOC) / AUTOMATA (Exact Provided Resources)
   {
     id: 'toc-gate-smashers',
     title: 'Theory of Computation',
@@ -748,7 +739,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'High-quality, step-by-step logic and automata breakdowns.',
     category: 'toc-automata',
     categoryLabel: 'TOC / Automata',
-    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4jypuF3sK8F5G8_',
+    url: 'https://www.youtube.com/watch?v=58N2N7zJGrQ&list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev',
   },
   {
     id: 'toc-knowledge-gate',
@@ -757,7 +748,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Complete syllabus coverage for GATE and university TOC exams.',
     category: 'toc-automata',
     categoryLabel: 'TOC / Automata',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe11F1kXFq8N35iH9L-eOa7L_',
+    url: 'https://www.youtube.com/watch?v=9kuynHcM3UA&list=PLmXKhU9FNesSdCsn6YQqu9DmXRMsYdZ2T',
   },
   {
     id: 'toc-education-4u',
@@ -766,7 +757,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Thorough coverage of DFA, NFA, PDA, and Turing Machines.',
     category: 'toc-automata',
     categoryLabel: 'TOC / Automata',
-    url: 'https://www.youtube.com/playlist?list=PLrjkTql3jnm_TWTzj_F5gC4i-4H1G63hT',
+    url: 'https://www.youtube.com/watch?v=dCiZZiqVv9w&list=PLrjkTql3jnm_TWSXXvWX1_jX-L6f1QJSx',
   },
   {
     id: 'toc-easy-engineering',
@@ -775,10 +766,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Simplified approach to formal languages and automata.',
     category: 'toc-automata',
     categoryLabel: 'TOC / Automata',
-    url: 'https://www.youtube.com/playlist?list=PLV8vIYTIdSnZS2L6Z91l9_A_B3T2K0_y7',
+    url: 'https://www.youtube.com/watch?v=iD6u_2iNnu0&list=PLV8vIYTIdSnZYVUJ6duL_ulTsmVQmmd74',
   },
 
-  // 12. COMPILER DESIGN (Exact 5 Provided Resources)
+  // 12. COMPILER DESIGN (Exact Provided Resources)
   {
     id: 'compiler-gate-smashers',
     title: 'Compiler Design',
@@ -795,7 +786,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Detailed tutorials on parsing, lexers, and syntax analysis.',
     category: 'compiler-design',
     categoryLabel: 'Compiler Design',
-    url: 'https://www.youtube.com/playlist?list=PLBlnK6fEyqRgP6x4x_0q06P6B6G-903Lz',
+    url: 'https://www.youtube.com/watch?v=5ZmFlxrNaN8&list=PLBlnK6fEyqRjT3oJxFXRgjPNzeS-LFY-q',
   },
   {
     id: 'compiler-knowledge-gate',
@@ -813,7 +804,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Great resource for college compiler design exams.',
     category: 'compiler-design',
     categoryLabel: 'Compiler Design',
-    url: 'https://www.youtube.com/playlist?list=PLrjkTql3jnm-E_G2E8vG9a1T4-OmsL80J',
+    url: 'https://www.youtube.com/watch?v=KBulg_u-b3w&list=PLrjkTql3jnm-wW5XdvumCa1u9LjczipjA',
   },
   {
     id: 'compiler-easy-engineering',
@@ -822,7 +813,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Short, to-the-point videos covering essential compiler topics.',
     category: 'compiler-design',
     categoryLabel: 'Compiler Design',
-    url: 'https://www.youtube.com/playlist?list=PLV8vIYTIdSnaG5Fk3YxG1aO0yR22V_d7e',
+    url: 'https://www.youtube.com/watch?v=hRM9ZvjbpVY&list=PLV8vIYTIdSnaeEO7C3elIV9u-Vj5G5CRF',
   },
 
   // 13. WEB DEVELOPMENT (Exact 5 Provided Resources)
@@ -872,7 +863,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     url: 'https://www.youtube.com/watch?v=mU6anWqZJcc',
   },
 
-  // 14. SOFTWARE ENGINEERING (Exact 5 Provided Resources)
+  // 14. SOFTWARE ENGINEERING (Exact Provided Resources)
   {
     id: 'se-gate-smashers',
     title: 'Software Engineering',
@@ -889,7 +880,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'In-depth course on software testing, metrics, and project management.',
     category: 'software-engineering',
     categoryLabel: 'Software Engineering',
-    url: 'https://www.youtube.com/playlist?list=PLmXKhU9FNe117Kj5Yf9A1eD0Z2O5N0Bw2',
+    url: 'https://www.youtube.com/watch?v=NlLM3sVF8wY&list=PLmXKhU9FNesTrw7n8ouPsSLEcduRlENHr',
   },
   {
     id: 'se-education-4u',
@@ -898,7 +889,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Structured engineering principles explained for university students.',
     category: 'software-engineering',
     categoryLabel: 'Software Engineering',
-    url: 'https://www.youtube.com/playlist?list=PLrjkTql3jnm_nN2O4i47B49V9U4xO5Xw1',
+    url: 'https://www.youtube.com/watch?v=WxkP5KR_Emk&list=PLrjkTql3jnm9b5nr-ggx7Pt1G4UAHeFlJ',
   },
   {
     id: 'se-jennys-lectures',
@@ -907,7 +898,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Simple and clear explanations of core software engineering concepts.',
     category: 'software-engineering',
     categoryLabel: 'Software Engineering',
-    url: 'https://www.youtube.com/playlist?list=PLdo5W4Nhv31bN7YvC-h3A26k6P43N2zRk',
+    url: 'https://www.youtube.com/watch?v=8jH07r6135o&list=PL_pbwdIyffslgxMVyXhnHiSn_EWTvx1G-',
   },
   {
     id: 'se-freecodecamp',
@@ -916,10 +907,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Practical industry-level software engineering concepts.',
     category: 'software-engineering',
     categoryLabel: 'Software Engineering',
-    url: 'https://www.youtube.com/watch?v=Oqj5727F49M',
+    url: 'https://www.youtube.com/watch?v=F2FmTdLtb_4',
   },
 
-  // 15. GIT & GITHUB (Exact 5 Provided Resources)
+  // 15. GIT & GITHUB (Exact Provided Resources)
   {
     id: 'git-codewithharry',
     title: 'Git & GitHub Tutorial',
@@ -936,7 +927,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Essential version control concepts geared toward college students.',
     category: 'git-github',
     categoryLabel: 'Git & GitHub',
-    url: 'https://www.youtube.com/watch?v=ezc56rD84C8',
+    url: 'https://www.youtube.com/watch?v=Ez8F0nW6S-w',
   },
   {
     id: 'git-kunal-kushwaha',
@@ -966,7 +957,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     url: 'https://www.youtube.com/watch?v=8JJ101D3knE',
   },
 
-  // 16. ARTIFICIAL INTELLIGENCE (Exact 5 Provided Resources)
+  // 16. ARTIFICIAL INTELLIGENCE (Exact Provided Resources)
   {
     id: 'ai-gate-smashers',
     title: 'Artificial Intelligence',
@@ -1010,10 +1001,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Rigorous university-level curriculum backed by IIT professors.',
     category: 'artificial-intelligence',
     categoryLabel: 'Artificial Intelligence',
-    url: 'https://www.youtube.com/playlist?list=PLbMVogVj5nJS2y17l_Y43tQ2k9x_H5B4c',
+    url: 'https://www.youtube.com/watch?v=GHpchgLoDvI&list=PLp6ek2hDcoNB_YJCruBFjhF79f5ZHyBuz',
   },
 
-  // 17. MACHINE LEARNING (Exact 5 Provided Resources)
+  // 17. MACHINE LEARNING (Exact Provided Resources)
   {
     id: 'ml-krish-naik',
     title: 'Complete Machine Learning Playlist',
@@ -1030,7 +1021,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Fantastic beginner-friendly ML course covering real-world data.',
     category: 'machine-learning',
     categoryLabel: 'Machine Learning',
-    url: 'https://www.youtube.com/watch?v=i_LwzRmAuso',
+    url: 'https://www.youtube.com/watch?v=i_LwzRVP7bg',
   },
   {
     id: 'ml-codewithharry',
@@ -1060,7 +1051,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     url: 'https://www.youtube.com/watch?v=ukzFI9rgwfU',
   },
 
-  // 18. CLOUD COMPUTING (Exact 5 Provided Resources)
+  // 18. CLOUD COMPUTING (Exact Provided Resources)
   {
     id: 'cloud-freecodecamp',
     title: 'AWS Certified Cloud Practitioner',
@@ -1104,10 +1095,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Simplified primer on how the cloud works for developers.',
     category: 'cloud-computing',
     categoryLabel: 'Cloud Computing',
-    url: 'https://www.youtube.com/watch?v=1b-3D9616XQ',
+    url: 'https://www.youtube.com/watch?v=6l88XYUjNIs&list=PLYwpaL_SFmcCyQH0n9GHfwviu6KeJ46BV',
   },
 
-  // 19. SYSTEM DESIGN (Exact 5 Provided Resources)
+  // 19. SYSTEM DESIGN (Exact Provided Resources)
   {
     id: 'sd-gaurav-sen',
     title: 'System Design',
@@ -1115,7 +1106,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'The absolute gold standard for understanding large-scale systems in India.',
     category: 'system-design',
     categoryLabel: 'System Design',
-    url: 'https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-G6bwQBsyT',
+    url: 'https://www.youtube.com/watch?v=SqcXvc3ZmRU&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX',
   },
   {
     id: 'sd-freecodecamp',
@@ -1133,7 +1124,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Highly visual breakdowns of modern application architectures.',
     category: 'system-design',
     categoryLabel: 'System Design',
-    url: 'https://www.youtube.com/playlist?list=PLlsmxlJcj1BuVsyiycgR5HwD6R304859p',
+    url: 'https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf',
   },
   {
     id: 'sd-shreyansh',
@@ -1151,10 +1142,10 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'In-depth case studies of designing apps like Uber, WhatsApp, and Netflix.',
     category: 'system-design',
     categoryLabel: 'System Design',
-    url: 'https://www.youtube.com/playlist?list=PL9n0l8rSshSn_H3kLz3qT6n71r4lWb1nJ',
+    url: 'https://www.youtube.com/watch?v=EpASu_1dUdE&list=PLhgw50vUymyckXl3D1IlXoVl94wknJfUC',
   },
 
-  // 20. COMPETITIVE PROGRAMMING (Exact 5 Provided Resources)
+  // 20. COMPETITIVE PROGRAMMING (Exact Provided Resources)
   {
     id: 'cp-luv',
     title: 'Competitive Programming Course',
@@ -1162,7 +1153,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'The most complete CP-focused C++ course covering advanced math and graphs.',
     category: 'competitive-programming',
     categoryLabel: 'Competitive Programming',
-    url: 'https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmIPvGI',
+    url: 'https://www.youtube.com/watch?v=lHJcLLsre70&list=PLauivoElc3gh48CgP4cQPrC1wrpAqY9cf',
   },
   {
     id: 'cp-takeuforward',
@@ -1171,7 +1162,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Top-tier logic building playlist necessary for competitive coding.',
     category: 'competitive-programming',
     categoryLabel: 'Competitive Programming',
-    url: 'https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81P89u',
+    url: 'https://www.youtube.com/watch?v=tyB0ztf0DNY&list=PLgUwDviBIf0pwFf-BnpkXxs0Ra0eU2sJY',
   },
   {
     id: 'cp-codencode',
@@ -1180,7 +1171,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Deep dive into number theory and graph theory for CP.',
     category: 'competitive-programming',
     categoryLabel: 'Competitive Programming',
-    url: 'https://www.youtube.com/playlist?list=PL2q4fbVm1Ik6FxyYfFwTz_O6GjW9wL5nE',
+    url: 'https://www.youtube.com/watch?v=6ZBY9yGNWbI&list=PLzjZaW71kMwTGbP1suqY16w1VSb9ZNuvE',
   },
   {
     id: 'cp-freecodecamp',
@@ -1189,7 +1180,7 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'Long-form video breaking down CP tricks and fast algorithms.',
     category: 'competitive-programming',
     categoryLabel: 'Competitive Programming',
-    url: 'https://www.youtube.com/watch?v=QZ0D6Fz316c',
+    url: 'https://www.youtube.com/watch?v=tw1vExHbjWM&list=PLxgZQoSe9cg0-p9RHvaf32XoFEHT_2tj2',
   },
   {
     id: 'cp-aditya-verma',
@@ -1198,6 +1189,6 @@ export const STUDY_RESOURCES_DATA: StudyResource[] = [
     description: 'High-level problem-solving tactics by a top-rated competitive coder.',
     category: 'competitive-programming',
     categoryLabel: 'Competitive Programming',
-    url: 'https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmF-4sCGXkP1X_J5',
+    url: 'https://www.youtube.com/watch?v=nqowUJzG-iM&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go',
   },
 ];
