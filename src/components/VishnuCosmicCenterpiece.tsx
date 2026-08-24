@@ -8,7 +8,6 @@ import {
   Library, 
   Sparkles, 
   CheckCircle2,
-  MessageCircle,
   Instagram,
   Linkedin,
   Sun
@@ -472,15 +471,6 @@ export const VishnuCosmicCenterpiece: React.FC<VishnuCosmicCenterpieceProps> = (
               Direct Connect:
             </span>
             <div className="flex items-center gap-1.5">
-              <a
-                href={FOUNDER_INFO.links.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp Vishnu"
-                className="p-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 transition-all hover:scale-110"
-              >
-                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-              </a>
               <a
                 href={FOUNDER_INFO.links.instagram}
                 target="_blank"

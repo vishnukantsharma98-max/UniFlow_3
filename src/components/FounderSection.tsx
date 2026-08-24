@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { 
   CheckCircle2, 
-  MessageCircle, 
   Instagram, 
   Linkedin, 
   Mail, 
   GraduationCap, 
   Sparkles, 
-  Phone,
   Code2,
   Sun,
   Orbit,
@@ -151,18 +149,6 @@ export const FounderSection: React.FC = () => {
                 </h4>
                 
                 <div className="flex flex-wrap items-center gap-3">
-                  {/* WhatsApp Direct Link */}
-                  <a
-                    href={FOUNDER_INFO.links.whatsapp}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="px-4 py-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-sm group"
-                  >
-                    <MessageCircle className="w-4 h-4 text-emerald-400" />
-                    <span>WhatsApp</span>
-                    <span className="text-[10px] text-emerald-300 font-mono">({FOUNDER_INFO.phone})</span>
-                  </a>
-
                   {/* Instagram Direct Link */}
                   <a
                     href={FOUNDER_INFO.links.instagram}

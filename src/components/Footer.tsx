@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Instagram, Linkedin, Mail, Heart, Sparkles } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Heart, Sparkles } from 'lucide-react';
 import { UniFlowLogo } from './UniFlowLogo';
 import { FOUNDER_INFO } from '../data';
 
@@ -21,16 +21,6 @@ export const Footer: React.FC = () => {
             
             {/* Social Icons with Vishnu's Actual URLs */}
             <div className="flex items-center gap-3 pt-2">
-              <a
-                href={FOUNDER_INFO.links.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp"
-                title={`WhatsApp (${FOUNDER_INFO.phone})`}
-                className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-emerald-300 flex items-center justify-center transition-all hover:scale-110 shadow-sm"
-              >
-                <MessageCircle className="w-4 h-4" />
-              </a>
               <a
                 href={FOUNDER_INFO.links.instagram}
                 target="_blank"

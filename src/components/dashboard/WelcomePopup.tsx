@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, Instagram, Linkedin } from 'lucide-react';
+import { X, Instagram, Linkedin } from 'lucide-react';
 import { FOUNDER_INFO } from '../../data';
 import { useTheme } from './ThemeSystem';
 
@@ -189,28 +189,6 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
 
         {/* Clickable Social Links with subtle staggered entrance */}
         <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3">
-          {/* WhatsApp */}
-          <a
-            id="welcome-popup-whatsapp-link"
-            href={FOUNDER_INFO.links.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              backgroundColor: isDark ? 'rgba(34, 197, 94, 0.12)' : 'rgba(34, 197, 94, 0.08)',
-              borderColor: isDark ? 'rgba(34, 197, 94, 0.3)' : 'rgba(34, 197, 94, 0.25)',
-              color: isDark ? '#4ADE80' : '#16A34A',
-              opacity: isAnimatedIn ? 1 : 0,
-              transform: isAnimatedIn ? 'translateY(0px)' : 'translateY(6px)',
-              transitionDuration: isAnimatedIn ? '300ms' : '180ms',
-              transitionDelay: isAnimatedIn ? '140ms' : '0ms',
-              transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
-            }}
-            className="flex-1 min-w-[110px] px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xs hover:bg-emerald-500 hover:text-white will-change-[transform,opacity]"
-          >
-            <MessageCircle className="w-4 h-4" />
-            <span>WhatsApp</span>
-          </a>
-
           {/* Instagram */}
           <a
             id="welcome-popup-instagram-link"
@@ -224,7 +202,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
               opacity: isAnimatedIn ? 1 : 0,
               transform: isAnimatedIn ? 'translateY(0px)' : 'translateY(6px)',
               transitionDuration: isAnimatedIn ? '300ms' : '180ms',
-              transitionDelay: isAnimatedIn ? '190ms' : '0ms',
+              transitionDelay: isAnimatedIn ? '140ms' : '0ms',
               transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
             }}
             className="flex-1 min-w-[110px] px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xs hover:bg-pink-500 hover:text-white will-change-[transform,opacity]"
@@ -246,7 +224,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
               opacity: isAnimatedIn ? 1 : 0,
               transform: isAnimatedIn ? 'translateY(0px)' : 'translateY(6px)',
               transitionDuration: isAnimatedIn ? '300ms' : '180ms',
-              transitionDelay: isAnimatedIn ? '240ms' : '0ms',
+              transitionDelay: isAnimatedIn ? '190ms' : '0ms',
               transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
             }}
             className="flex-1 min-w-[110px] px-3.5 py-2 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-xs hover:bg-blue-600 hover:text-white will-change-[transform,opacity]"

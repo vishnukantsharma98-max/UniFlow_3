@@ -323,12 +323,9 @@ export const FOUNDER_INFO = {
   photoUrl: VISHNU_BASE64_PHOTO,
   remotePhotoUrl: VISHNU_BASE64_PHOTO,
   fallbackPhotoUrl: 'https://i.postimg.cc/PJcsPg5M/4tui.jpg',
-  phone: '+91 9461474764',
-  rawPhone: '9461474764',
   instagramHandle: '@writer.arjun.07',
   linkedinHandle: 'vishnu-kant-sharma-student',
   links: {
-    whatsapp: 'https://wa.me/919461474764?text=Hi%20Vishnu,%20I%20saw%20UniFlow!',
     instagram: 'https://www.instagram.com/writer.arjun.07/?hl=en',
     linkedin: 'https://www.linkedin.com/in/vishnu-kant-sharma-student',
     email: 'mailto:vishnukantsharma98@gmail.com'

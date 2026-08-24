@@ -3,7 +3,6 @@ import {
   ArrowRight, 
   Sparkles, 
   Star, 
-  MessageCircle,
   Instagram,
   Linkedin
 } from 'lucide-react';
@@ -119,15 +118,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <span className="text-xs font-bold text-slate-200 uppercase tracking-wider mr-1 drop-shadow-sm">
                 Connect directly:
               </span>
-              <a
-                href={FOUNDER_INFO.links.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#0a1e16]/90 hover:bg-[#0f2e22] border border-emerald-500/40 hover:border-emerald-400 text-emerald-300 text-xs font-bold transition-all hover:scale-105 shadow-md group"
-              >
-                <MessageCircle className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
-                <span>WhatsApp</span>
-              </a>
               <a
                 href={FOUNDER_INFO.links.instagram}
                 target="_blank"
