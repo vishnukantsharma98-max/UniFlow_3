@@ -1,0 +1,90 @@
+{
+  "entities": {
+    "AdminRecord": {
+      "title": "AdminRecord",
+      "description": "Authorized UniFlow administrator access record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "role": { "type": "string", "enum": ["primaryAdmin", "secondaryAdmin"] },
+        "addedBy": { "type": "string" },
+        "addedAt": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["active", "revoked"] }
+      },
+      "required": ["email", "role", "status"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Private student academic and social profile",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string", "maxLength": 100 },
+        "class": { "type": "string", "enum": ["DI", "A", "B", "SG", ""] },
+        "branch": { "type": "string", "enum": ["AIML", "AIDS", "CSE", ""] },
+        "semester": { "type": "string", "enum": ["Semester 1", "Semester 2", "Semester 3", ""] },
+        "phone": { "type": "string", "maxLength": 20 },
+        "instagram": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email"]
+    },
+    "StudentReview": {
+      "title": "StudentReview",
+      "description": "Private student feedback and suggestions record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string", "maxLength": 100 },
+        "class": { "type": "string", "enum": ["DI", "A", "B", "SG", ""] },
+        "branch": { "type": "string", "enum": ["AIML", "AIDS", "CSE", ""] },
+        "rating": { "type": "number", "minimum": 1, "maximum": 5 },
+        "comment": { "type": "string", "maxLength": 2000 },
+        "status": { "type": "string", "enum": ["new", "reviewed", "resolved"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email", "rating", "comment", "status"]
+    },
+    "UserRecord": {
+      "title": "UserRecord",
+      "description": "Authenticated Firebase user directory record",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "provider": { "type": "string" },
+        "creationTime": { "type": "string", "format": "date-time" },
+        "lastSignInTime": { "type": "string", "format": "date-time" },
+        "emailVerified": { "type": "boolean" },
+        "disabled": { "type": "boolean" },
+        "role": { "type": "string", "enum": ["primaryAdmin", "secondaryAdmin", "user"] }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/admins/{adminId}": {
+      "schema": "AdminRecord",
+      "description": "Admin directory and role permissions list"
+    },
+    "/users/{userId}": {
+      "schema": "UserRecord",
+      "description": "Authenticated user directory and session records"
+    },
+    "/profiles/{userId}": {
+      "schema": "UserProfile",
+      "description": "Private student profile documents keyed by UID"
+    },
+    "/reviews/{reviewId}": {
+      "schema": "StudentReview",
+      "description": "Private reviews and feedback submissions"
+    }
+  }
+}

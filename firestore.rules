@@ -1,0 +1,109 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global helper definitions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isUser(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isPrimaryAdmin() {
+      return isSignedIn() && 
+        request.auth.token.email != null && (
+          request.auth.token.email.lower() == 'vishnukantsharma98@gmail.com' ||
+          request.auth.token.email.lower() == 'vishnukant.25bcon2366@jecrcu.edu.in'
+        );
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        isPrimaryAdmin() ||
+        request.auth.token.admin == true ||
+        request.auth.token.secondaryAdmin == true ||
+        request.auth.token.role == 'admin' ||
+        request.auth.token.role == 'secondaryAdmin' ||
+        request.auth.token.role == 'primaryAdmin' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        (request.auth.token.email != null && exists(/databases/$(database)/documents/admins/$(request.auth.token.email))) ||
+        (request.auth.token.email != null && exists(/databases/$(database)/documents/admins/$(request.auth.token.email.lower())))
+      );
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Admins Collection
+    // Allow any signed-in user to check admin status; Primary Admin can write any, or signed-in secondary admin can link their own UID
+    match /admins/{adminId} {
+      allow read: if isSignedIn();
+      allow write: if isPrimaryAdmin() || (isSignedIn() && request.auth.uid == adminId);
+    }
+
+    // Users Directory (All authenticated users can sync their own record; Admins can read/list all)
+    match /users/{userId} {
+      allow get: if isSignedIn() && (request.auth.uid == userId || isAdmin() || (request.auth.token.email != null && request.auth.token.email.lower() == userId.lower()));
+      allow list: if isAdmin();
+      allow create, update: if isSignedIn() && (
+        (request.auth.uid == userId && (incoming().uid == request.auth.uid || incoming().userId == request.auth.uid)) ||
+        isAdmin()
+      );
+      allow delete: if isAdmin();
+    }
+
+    // Student Profiles (Private: Owner & Admins only)
+    match /profiles/{userId} {
+      allow get: if isSignedIn() && (request.auth.uid == userId || isAdmin());
+      allow list: if isAdmin();
+      
+      allow create, update: if isSignedIn() && (
+        (request.auth.uid == userId && incoming().userId == request.auth.uid) ||
+        isAdmin()
+      );
+
+      // ONLY Admins can delete profiles. Students CANNOT delete.
+      allow delete: if isAdmin();
+    }
+
+    // Reviews & Feedback (Private: Submitter & Admins only)
+    match /reviews/{reviewId} {
+      allow get: if isSignedIn() && (
+        resource.data.userId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow list: if isSignedIn() && (
+        resource.data.userId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow create: if isSignedIn() && (
+        incoming().userId == request.auth.uid &&
+        incoming().rating >= 1 && incoming().rating <= 5 &&
+        incoming().comment is string
+      );
+
+      allow update: if isSignedIn() && (
+        (resource.data.userId == request.auth.uid && incoming().userId == request.auth.uid) ||
+        isAdmin()
+      );
+
+      // ONLY Admins can delete reviews. Students CANNOT delete.
+      allow delete: if isAdmin();
+    }
+  }
+}
