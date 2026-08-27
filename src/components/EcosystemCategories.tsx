@@ -56,15 +56,15 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 scroll-reveal">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider mb-3.5 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-700 dark:text-purple-300 text-xs font-semibold uppercase tracking-wider mb-3.5 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
             <span>Modular Student Architecture</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight leading-tight">
             Everything you need. <br />
             <span className="text-flow-gradient">One place.</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
             Stop switching across dozen tabs and unverified drives. UniFlow integrates every essential branch of your university journey into one single intelligent interface.
           </p>
 
@@ -83,7 +83,7 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
                   activeFilter === tab.id
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md shadow-purple-500/25 border border-purple-400/40'
-                    : 'bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 border border-white/10 hover:text-white shadow-sm'
+                    : 'bg-white/80 dark:bg-white/[0.04] hover:bg-slate-100 dark:hover:bg-white/[0.08] text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-white/10 hover:text-slate-900 dark:hover:text-white shadow-xs'
                 }`}
               >
                 {tab.label}
@@ -100,7 +100,7 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
                 key={cat.id}
                 id={`cat-${cat.id}`}
                 onClick={onOpenAuth}
-                className={`group relative rounded-2xl p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] cursor-pointer flex flex-col justify-between overflow-hidden bg-[#0d0722]/90 border border-purple-500/20 shadow-[0_4px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_12px_35px_rgba(168,85,247,0.25)] hover:border-purple-400/60 scroll-reveal stagger-${Math.min(idx + 1, 6)}`}
+                className={`group relative rounded-2xl p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] cursor-pointer flex flex-col justify-between overflow-hidden bg-white/85 dark:bg-[#0d0722]/90 border border-slate-200/80 dark:border-purple-500/20 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_14px_35px_rgba(124,58,237,0.12)] dark:hover:shadow-[0_12px_35px_rgba(168,85,247,0.25)] hover:border-purple-400/60 scroll-reveal stagger-${Math.min(idx + 1, 6)}`}
               >
                 {/* Subtle top iridescent line */}
                 <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500/40 to-transparent group-hover:via-pink-500 transition-all" />
@@ -109,13 +109,13 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div 
-                      className="p-2.5 rounded-xl bg-white/[0.06] border border-white/10 group-hover:scale-105 transition-transform shadow-sm"
+                      className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 group-hover:scale-105 transition-transform shadow-xs"
                       style={{ color: cat.accentColor }}
                     >
                       {getCategoryIcon(cat.icon, 'w-5 h-5')}
                     </div>
                     {cat.badge && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-sm">
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30 shadow-xs">
                         {cat.badge}
                       </span>
                     )}
@@ -123,26 +123,26 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
 
                   {/* Title & Tagline */}
                   <div className="flex items-baseline gap-2 flex-wrap">
-                    <h3 className="text-lg font-bold font-display text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-lg font-bold font-display text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
                       {cat.title}
                     </h3>
-                    <span className="text-[11px] font-semibold text-purple-400">
+                    <span className="text-[11px] font-semibold text-purple-600 dark:text-purple-400">
                       · {cat.tagline}
                     </span>
                   </div>
 
-                  <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
                     {cat.description}
                   </p>
 
                   {/* Compact Quick Tags */}
-                  <div className="flex flex-wrap gap-1.5 mt-3 pt-2.5 border-t border-white/10">
+                  <div className="flex flex-wrap gap-1.5 mt-3 pt-2.5 border-t border-slate-200/80 dark:border-white/10">
                     {cat.items.slice(0, 3).map((item, i) => (
                       <span 
                         key={i} 
-                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/10 text-[11px] text-slate-300"
+                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/80 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/10 text-[11px] text-slate-700 dark:text-slate-300"
                       >
-                        <Check className="w-3 h-3 text-emerald-400 shrink-0" />
+                        <Check className="w-3 h-3 text-emerald-500 dark:text-emerald-400 shrink-0" />
                         <span>{item}</span>
                       </span>
                     ))}
@@ -150,11 +150,11 @@ export const EcosystemCategories: React.FC<EcosystemCategoriesProps> = ({ onOpen
                 </div>
 
                 {/* Bottom: Direct Access Action */}
-                <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-[11px] text-purple-300 font-semibold truncate mr-2">
+                <div className="pt-3 mt-3 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between">
+                  <span className="text-[11px] text-purple-700 dark:text-purple-300 font-semibold truncate mr-2">
                     {cat.highlightText}
                   </span>
-                  <div className="px-2.5 py-1 rounded-full bg-white/[0.06] flex items-center gap-1 text-[11px] font-semibold text-slate-200 group-hover:text-white group-hover:bg-purple-600 transition-all shrink-0 shadow-sm">
+                  <div className="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-white/[0.06] flex items-center gap-1 text-[11px] font-semibold text-slate-700 dark:text-slate-200 group-hover:text-white group-hover:bg-purple-600 transition-all shrink-0 shadow-xs">
                     <span>Open</span>
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </div>

@@ -41,24 +41,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 flex items-center justify-center overflow-hidden"
     >
       {/* ================= HERO READABILITY LAYER (ORGANIC NATURAL GRADIENT) ================= */}
-      {/* Organic dark gradient veil behind hero to ensure 100% razor-sharp contrast in all modes */}
+      {/* Dark mode gradient veil */}
       <div 
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute inset-0 pointer-events-none z-0 hidden dark:block"
         style={{
           background: 'radial-gradient(ellipse 80% 70% at 30% 35%, rgba(6, 4, 15, 0.88) 0%, rgba(8, 5, 20, 0.65) 45%, rgba(10, 8, 25, 0.3) 75%, transparent 100%)'
         }}
       />
       <div 
-        className="absolute inset-0 pointer-events-none z-0"
+        className="absolute inset-0 pointer-events-none z-0 hidden dark:block"
         style={{
           background: 'linear-gradient(to bottom, rgba(7, 4, 18, 0.85) 0%, rgba(7, 4, 18, 0.4) 60%, transparent 100%)'
         }}
       />
 
-      {/* Background Ambient Energy Lights */}
-      <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-purple-600/20 rounded-full blur-[140px] pointer-events-none z-0 animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-pink-600/15 rounded-full blur-[130px] pointer-events-none z-0" />
-      <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none z-0" />
+      {/* Light mode soft aurora background gradient */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 dark:hidden"
+        style={{
+          background: 'radial-gradient(ellipse 70% 60% at 25% 30%, rgba(216, 180, 254, 0.22) 0%, rgba(244, 114, 182, 0.12) 40%, rgba(254, 243, 199, 0.15) 70%, transparent 100%)'
+        }}
+      />
+
+      {/* Background Ambient Energy Lights - Soft, Premium & Natural */}
+      <div className="absolute top-1/4 right-1/4 w-[420px] h-[420px] bg-purple-400/10 dark:bg-purple-600/20 rounded-full blur-[130px] pointer-events-none z-0" />
+      <div className="absolute bottom-1/4 right-1/3 w-[360px] h-[360px] bg-pink-400/8 dark:bg-pink-600/15 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-1/3 left-1/4 w-[320px] h-[320px] bg-amber-300/10 dark:bg-amber-500/15 rounded-full blur-[130px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
         
@@ -74,15 +82,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             
             {/* 1. HERO BADGES (Mobile Order 1 / Desktop Top) */}
             <div className="flex flex-wrap items-center gap-2.5 mb-5 order-1">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#120a28]/90 border border-purple-400/40 backdrop-blur-md shadow-md group hover:border-purple-300 transition-colors">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
-                <span className="text-xs font-bold text-purple-200 tracking-wide">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/80 dark:bg-[#120a28]/90 border border-purple-300/80 dark:border-purple-400/40 backdrop-blur-md shadow-xs group hover:border-purple-400 transition-colors">
+                <span className="w-2 h-2 rounded-full bg-purple-600 dark:bg-amber-400 animate-ping" />
+                <span className="text-xs font-bold text-purple-900 dark:text-purple-200 tracking-wide">
                   All-in-One Student Super App ✨
                 </span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0a1e16]/90 border border-emerald-400/40 text-emerald-300 text-xs font-bold backdrop-blur-md shadow-md">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100/80 dark:bg-[#0a1e16]/90 border border-emerald-300/80 dark:border-emerald-400/40 text-emerald-900 dark:text-emerald-300 text-xs font-bold backdrop-blur-md shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
                 <span>Live by Vishnu Kant Sharma</span>
               </div>
             </div>
@@ -100,40 +108,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* 3. MAIN HEADLINE (Mobile Order 3 / Desktop Order) */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-display tracking-tight leading-[1.08] mb-5 order-3">
-              <span className="text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+              <span className="text-slate-900 dark:text-white drop-shadow-xs dark:drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
                 Your student life,
               </span>
-              <span className="text-flow-gradient block mt-1.5 drop-shadow-[0_0_35px_rgba(236,72,153,0.4)]">
+              <span className="text-flow-gradient block mt-1.5 drop-shadow-xs dark:drop-shadow-[0_0_35px_rgba(236,72,153,0.4)]">
                 all in one flow.
               </span>
             </h1>
 
             {/* 4. SUPPORTING PARAGRAPH (Mobile Order 4) */}
-            <p className="text-base sm:text-lg text-slate-100 font-medium max-w-2xl leading-relaxed mb-6 order-4 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-200 font-normal max-w-2xl leading-relaxed mb-6 order-4">
               Assignments, exams, AI tools, games, books, apps, entertainment and everything you need — in one intelligent experience crafted for university students.
             </p>
 
             {/* 5. CONNECT DIRECTLY (Mobile Order 5) */}
             <div className="flex items-center gap-2 sm:gap-2.5 mb-7 flex-wrap order-5">
-              <span className="text-xs font-bold text-slate-200 uppercase tracking-wider mr-1 drop-shadow-sm">
+              <span className="text-xs font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider mr-1">
                 Connect directly:
               </span>
               <a
                 href={FOUNDER_INFO.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#23091f]/90 hover:bg-[#340d2e] border border-pink-500/40 hover:border-pink-400 text-pink-300 text-xs font-bold transition-all hover:scale-105 shadow-md group"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-pink-50 dark:bg-[#23091f]/90 hover:bg-pink-100 dark:hover:bg-[#340d2e] border border-pink-200 dark:border-pink-500/40 hover:border-pink-300 text-pink-700 dark:text-pink-300 text-xs font-bold transition-all hover:scale-105 shadow-xs group"
               >
-                <Instagram className="w-3.5 h-3.5 text-pink-400 group-hover:scale-110 transition-transform" />
+                <Instagram className="w-3.5 h-3.5 text-pink-500 dark:text-pink-400 group-hover:scale-110 transition-transform" />
                 <span>Instagram</span>
               </a>
               <a
                 href={FOUNDER_INFO.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#091529]/90 hover:bg-[#0d203e] border border-blue-500/40 hover:border-blue-400 text-blue-300 text-xs font-bold transition-all hover:scale-105 shadow-md group"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-[#091529]/90 hover:bg-blue-100 dark:hover:bg-[#0d203e] border border-blue-200 dark:border-blue-500/40 hover:border-blue-300 text-blue-700 dark:text-blue-300 text-xs font-bold transition-all hover:scale-105 shadow-xs group"
               >
-                <Linkedin className="w-3.5 h-3.5 text-blue-400 group-hover:scale-110 transition-transform" />
+                <Linkedin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform" />
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -144,11 +152,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <button
                 type="button"
                 onClick={onOpenAuth}
-                className="relative group overflow-hidden px-7 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white font-bold text-sm sm:text-base shadow-[0_10px_35px_-5px_rgba(217,70,239,0.5)] hover:shadow-[0_15px_45px_-5px_rgba(217,70,239,0.7)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5 cursor-pointer shrink-0 pointer-events-auto"
+                className="relative group overflow-hidden px-7 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white font-bold text-sm sm:text-base shadow-[0_10px_30px_-5px_rgba(217,70,239,0.4)] hover:shadow-[0_15px_40px_-5px_rgba(217,70,239,0.6)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2.5 cursor-pointer shrink-0 pointer-events-auto"
               >
                 <div className="absolute inset-0 w-1/2 h-full bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 pointer-events-none" />
 
-                <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 shadow shrink-0 pointer-events-none">
+                <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center p-0.5 shadow-xs shrink-0 pointer-events-none">
                   <svg className="w-full h-full pointer-events-none" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
@@ -165,20 +173,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Secondary Explore CTA */}
               <a
                 href="#explore"
-                className="px-6 py-3.5 rounded-2xl bg-[#120a28]/90 hover:bg-[#1a0f38] border border-white/15 hover:border-purple-400/60 text-slate-100 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                className="px-6 py-3.5 rounded-2xl bg-white/90 dark:bg-[#120a28]/90 hover:bg-white dark:hover:bg-[#1a0f38] border border-slate-200/90 dark:border-white/15 hover:border-purple-300 dark:hover:border-purple-400/60 text-slate-800 dark:text-slate-100 hover:text-purple-600 dark:hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-xs cursor-pointer"
               >
                 <span>Explore UniFlow</span>
-                <ArrowRight className="w-4 h-4 text-purple-300" />
+                <ArrowRight className="w-4 h-4 text-purple-600 dark:text-purple-300" />
               </a>
             </div>
 
             {/* 7. SOCIAL PROOF (Mobile Order 7) */}
-            <div className="flex items-center gap-4 pt-4 border-t border-white/15 order-7">
+            <div className="flex items-center gap-4 pt-4 border-t border-slate-200/80 dark:border-white/15 order-7">
               <div className="flex -space-x-2.5 overflow-hidden p-0.5">
                 {SOCIAL_PROOF_STUDENTS.map((student, i) => (
                   <div 
                     key={i}
-                    className="relative inline-block h-10 w-10 rounded-full ring-2 ring-purple-900 overflow-hidden shadow-md border border-purple-500/40 bg-purple-950"
+                    className="relative inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-purple-900 overflow-hidden shadow-xs border border-slate-200 dark:border-purple-500/40 bg-slate-100 dark:bg-purple-950"
                   >
                     <img 
                       src={student.image} 
@@ -196,8 +204,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <Star key={i} className="w-4 h-4 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-xs text-slate-200 mt-0.5 font-medium">
-                  Loved by <span className="text-purple-300 font-bold">50,000+ students</span> across universities
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5 font-medium">
+                  Loved by <span className="text-purple-700 dark:text-purple-300 font-bold">50,000+ students</span> across universities
                 </p>
               </div>
             </div>

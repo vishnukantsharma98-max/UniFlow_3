@@ -28,7 +28,7 @@ export const FounderSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Founder Card Container */}
-        <div className="p-6 sm:p-10 lg:p-12 rounded-[38px] bg-[#0d0722]/95 border border-purple-500/25 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] relative overflow-hidden scroll-reveal">
+        <div className="p-6 sm:p-10 lg:p-12 rounded-[38px] bg-white/90 dark:bg-[#0d0722]/95 border border-slate-200/90 dark:border-purple-500/25 backdrop-blur-2xl shadow-[0_20px_50px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)] relative overflow-hidden scroll-reveal">
           
           {/* Subtle Top Light Accent */}
           <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-violet-600 via-fuchsia-500 to-amber-400" />
@@ -40,19 +40,19 @@ export const FounderSection: React.FC = () => {
               <div className="relative w-full max-w-[340px] aspect-[4/5.2] rounded-[32px] overflow-hidden p-[2px] bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 shadow-[0_12px_40px_rgba(217,70,239,0.25)] group">
                 
                 {/* Solar Corona Effect */}
-                <div className="w-full h-full bg-[#120a2a] rounded-[30px] overflow-hidden relative flex flex-col items-center justify-between p-5 border border-purple-500/30">
+                <div className="w-full h-full bg-slate-50 dark:bg-[#120a2a] rounded-[30px] overflow-hidden relative flex flex-col items-center justify-between p-5 border border-slate-200 dark:border-purple-500/30">
                   
                   {/* Atmospheric Glow */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.15)_0%,rgba(236,72,153,0.1)_40%,rgba(18,10,42,0.95)_80%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.15)_0%,rgba(236,72,153,0.1)_40%,rgba(18,10,42,0.05)_80%)] dark:bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.15)_0%,rgba(236,72,153,0.1)_40%,rgba(18,10,42,0.95)_80%)]" />
 
                   {/* Top Status & Verification Badge */}
                   <div className="relative z-10 w-full flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 backdrop-blur-md shadow-sm">
-                      <Sun className="w-3.5 h-3.5 text-amber-400 animate-spin" style={{ animationDuration: '10s' }} />
+                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30 backdrop-blur-md shadow-xs">
+                      <Sun className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 animate-spin" style={{ animationDuration: '10s' }} />
                       <span>Founder & Creator</span>
                     </div>
-                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[10px] font-bold shadow-sm">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/15 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-[10px] font-bold shadow-xs">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping" />
                       <span>Online</span>
                     </div>
                   </div>
@@ -78,27 +78,27 @@ export const FounderSection: React.FC = () => {
                     </div>
 
                     <div className="flex items-center gap-1.5 justify-center">
-                      <h4 className="text-xl font-bold font-display text-white">
+                      <h4 className="text-xl font-bold font-display text-slate-900 dark:text-white">
                         {FOUNDER_INFO.name}
                       </h4>
-                      <CheckCircle2 className="w-4 h-4 text-amber-400 fill-amber-400/20" />
+                      <CheckCircle2 className="w-4 h-4 text-amber-500 dark:text-amber-400 fill-amber-400/20" />
                     </div>
                     
-                    <p className="text-xs text-purple-300 font-bold mt-0.5">
+                    <p className="text-xs text-purple-700 dark:text-purple-300 font-bold mt-0.5">
                       {FOUNDER_INFO.role}
                     </p>
-                    <p className="text-[11px] text-slate-300 mt-0.5 font-medium">
+                    <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 font-medium">
                       AIDS Student · {FOUNDER_INFO.university}
                     </p>
                   </div>
 
                   {/* Bottom Department Tag */}
-                  <div className="relative z-10 w-full py-2 px-3 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between text-xs text-slate-300 backdrop-blur-md shadow-sm">
+                  <div className="relative z-10 w-full py-2 px-3 rounded-xl bg-slate-100/90 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 flex items-center justify-between text-xs text-slate-700 dark:text-slate-300 backdrop-blur-md shadow-xs">
                     <div className="flex items-center gap-1.5">
-                      <BrainCircuit className="w-3.5 h-3.5 text-pink-400" />
-                      <span className="font-semibold text-white">AI & Data Science (AIDS)</span>
+                      <BrainCircuit className="w-3.5 h-3.5 text-pink-500 dark:text-pink-400" />
+                      <span className="font-semibold text-slate-900 dark:text-white">AI & Data Science (AIDS)</span>
                     </div>
-                    <span className="text-[10px] text-purple-300 font-bold">JECRC University</span>
+                    <span className="text-[10px] text-purple-700 dark:text-purple-300 font-bold">JECRC University</span>
                   </div>
 
                 </div>
@@ -108,33 +108,33 @@ export const FounderSection: React.FC = () => {
             {/* ================= FOUNDER STORY & SOCIAL CHANNELS (RIGHT) ================= */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider mb-4 w-fit shadow-sm">
-                <GraduationCap className="w-4 h-4 text-purple-400" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 dark:bg-purple-500/15 border border-purple-200 dark:border-purple-500/30 text-purple-700 dark:text-purple-300 text-xs font-semibold uppercase tracking-wider mb-4 w-fit shadow-xs">
+                <GraduationCap className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                 <span>Student-Led Innovation</span>
               </div>
 
               <div className="flex items-center gap-3 mb-2">
-                <h3 className="text-3xl sm:text-4xl font-extrabold font-display text-white tracking-tight">
+                <h3 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight">
                   Built by <span className="text-flow-gradient">{FOUNDER_INFO.name}</span>
                 </h3>
-                <CheckCircle2 className="w-6 h-6 text-amber-400 fill-amber-400/20 shrink-0" />
+                <CheckCircle2 className="w-6 h-6 text-amber-500 dark:text-amber-400 fill-amber-400/20 shrink-0" />
               </div>
 
-              <p className="text-base font-semibold text-purple-300 mb-3">
+              <p className="text-base font-semibold text-purple-700 dark:text-purple-300 mb-3">
                 {FOUNDER_INFO.tagline}
               </p>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6 font-normal">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-normal">
                 {FOUNDER_INFO.vision}
               </p>
 
               {/* Founder Quote Glass Box with Handwritten Signature */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-purple-500/30 backdrop-blur-md mb-8 relative shadow-sm">
-                <p className="text-sm sm:text-base text-slate-200 italic font-normal">
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50/90 dark:bg-white/[0.04] border border-slate-200/90 dark:border-purple-500/30 backdrop-blur-md mb-8 relative shadow-xs">
+                <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 italic font-normal">
                   &ldquo;{FOUNDER_INFO.quote}&rdquo;
                 </p>
                 <div className="mt-3 flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Student at JECRC University</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">Student at JECRC University</span>
                   <span className="font-signature text-2xl sm:text-3xl text-flow-gradient font-bold tracking-wide">
                     Vishnu Kant Sharma
                   </span>
@@ -143,8 +143,8 @@ export const FounderSection: React.FC = () => {
 
               {/* Direct Contact & Social Channels */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                   <span>Let&apos;s Connect & Collaborate</span>
                 </h4>
                 
@@ -154,11 +154,11 @@ export const FounderSection: React.FC = () => {
                     href={FOUNDER_INFO.links.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-2.5 rounded-xl bg-pink-500/15 hover:bg-pink-500/25 border border-pink-500/30 text-pink-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-sm"
+                    className="px-4 py-2.5 rounded-xl bg-pink-50 dark:bg-pink-500/15 hover:bg-pink-100 dark:hover:bg-pink-500/25 border border-pink-200 dark:border-pink-500/30 text-pink-700 dark:text-pink-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-xs"
                   >
-                    <Instagram className="w-4 h-4 text-pink-400" />
+                    <Instagram className="w-4 h-4 text-pink-600 dark:text-pink-400" />
                     <span>Instagram</span>
-                    <span className="text-[10px] text-pink-300">({FOUNDER_INFO.instagramHandle})</span>
+                    <span className="text-[10px] text-pink-700 dark:text-pink-300">({FOUNDER_INFO.instagramHandle})</span>
                   </a>
 
                   {/* LinkedIn Direct Link */}
@@ -166,9 +166,9 @@ export const FounderSection: React.FC = () => {
                     href={FOUNDER_INFO.links.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-2.5 rounded-xl bg-blue-500/15 hover:bg-blue-500/25 border border-blue-500/30 text-blue-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-sm"
+                    className="px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-500/15 hover:bg-blue-100 dark:hover:bg-blue-500/25 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-xs"
                   >
-                    <Linkedin className="w-4 h-4 text-blue-400" />
+                    <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     <span>LinkedIn</span>
                     <ExternalLink className="w-3 h-3 opacity-60" />
                   </a>
@@ -176,9 +176,9 @@ export const FounderSection: React.FC = () => {
                   {/* Email Me */}
                   <a
                     href={FOUNDER_INFO.links.email}
-                    className="px-4 py-2.5 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 border border-purple-500/30 text-purple-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-sm"
+                    className="px-4 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-500/15 hover:bg-purple-100 dark:hover:bg-purple-500/25 border border-purple-200 dark:border-purple-500/30 text-purple-700 dark:text-purple-300 text-xs font-bold transition-all flex items-center gap-2 hover:scale-105 shadow-xs"
                   >
-                    <Mail className="w-4 h-4 text-purple-400" />
+                    <Mail className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                     <span>Email Me</span>
                   </a>
                 </div>

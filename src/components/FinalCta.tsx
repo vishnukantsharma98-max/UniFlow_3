@@ -17,18 +17,18 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenAuth, isSigningIn = fa
         
         {/* Floating Logo Badge */}
         <div className="flex justify-center mb-6">
-          <div className="p-3 rounded-3xl bg-white/[0.06] border border-purple-500/30 backdrop-blur-2xl shadow-[0_0_40px_rgba(217,70,239,0.4)]">
+          <div className="p-3 rounded-3xl bg-white/80 dark:bg-white/[0.06] border border-slate-200/80 dark:border-purple-500/30 backdrop-blur-2xl shadow-md dark:shadow-[0_0_40px_rgba(217,70,239,0.4)]">
             <UniFlowLogo size="lg" showText={false} />
           </div>
         </div>
 
         {/* Big High-Contrast Headline (Line 1) */}
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-white tracking-tight leading-[1.15] mb-4 drop-shadow-md">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight leading-[1.15] mb-4">
           Ready to simplify the way you study, create, and explore?
         </h2>
 
         {/* High-Contrast Subtitle (Line 2) */}
-        <p className="text-lg sm:text-2xl text-purple-200 font-semibold max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-sm">
+        <p className="text-lg sm:text-2xl text-purple-700 dark:text-purple-200 font-semibold max-w-2xl mx-auto leading-relaxed mb-8">
           Everything you need for student life, in one flow.
         </p>
 
@@ -37,7 +37,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenAuth, isSigningIn = fa
           <button
             type="button"
             onClick={onOpenAuth}
-            className="w-full sm:w-auto relative group overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white font-bold text-base sm:text-lg shadow-[0_12px_45px_rgba(217,70,239,0.6)] hover:shadow-[0_18px_55px_rgba(217,70,239,0.8)] transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer pointer-events-auto"
+            className="w-full sm:w-auto relative group overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-white font-bold text-base sm:text-lg shadow-[0_12px_45px_rgba(217,70,239,0.4)] dark:shadow-[0_12px_45px_rgba(217,70,239,0.6)] hover:shadow-[0_18px_55px_rgba(217,70,239,0.6)] dark:hover:shadow-[0_18px_55px_rgba(217,70,239,0.8)] transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer pointer-events-auto"
           >
             {/* Shimmer reflection sweep */}
             <div className="absolute inset-0 w-1/2 h-full bg-white/25 skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 pointer-events-none" />
@@ -59,17 +59,17 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenAuth, isSigningIn = fa
         </div>
 
         {/* Feature assurance badges */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-300">
           <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
             <span>100% Free for Students</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Zap className="w-4 h-4 text-amber-400" />
+            <Zap className="w-4 h-4 text-amber-500 dark:text-amber-400" />
             <span>Instant Single-Click Access</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4 text-purple-400" />
+            <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />
             <span>Zero Third-Party Ads</span>
           </div>
         </div>

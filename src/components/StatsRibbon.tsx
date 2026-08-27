@@ -43,8 +43,8 @@ export const StatsRibbon: React.FC = () => {
 
   return (
     <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 sm:-mt-6 mb-12 sm:mb-16 scroll-reveal">
-      <div className="p-4 sm:p-5 rounded-3xl bg-white/[0.04] border border-purple-500/20 backdrop-blur-2xl shadow-[0_15px_40px_rgba(0,0,0,0.5)]">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+      <div className="p-4 sm:p-5 rounded-3xl bg-white/80 dark:bg-white/[0.04] border border-slate-200/80 dark:border-purple-500/20 backdrop-blur-2xl shadow-[0_10px_30px_rgba(0,0,0,0.04)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.5)]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/80 dark:divide-white/10">
           {stats.map((stat, idx) => (
             <div 
               key={idx} 
@@ -52,16 +52,16 @@ export const StatsRibbon: React.FC = () => {
                 idx > 0 ? 'pt-3 sm:pt-2.5' : ''
               }`}
             >
-              <div className="p-2.5 rounded-2xl bg-white/[0.06] border border-white/10 group-hover:border-purple-400/50 group-hover:bg-purple-500/20 transition-all mb-2 shadow-sm">
+              <div className="p-2.5 rounded-2xl bg-slate-100/80 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 group-hover:border-purple-400/50 group-hover:bg-purple-500/10 dark:group-hover:bg-purple-500/20 transition-all mb-2 shadow-xs">
                 {stat.icon}
               </div>
-              <span className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight group-hover:text-purple-300 transition-colors">
+              <span className="text-2xl sm:text-3xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
                 {stat.value}
               </span>
-              <span className="text-xs font-bold text-slate-200 mt-0.5">
+              <span className="text-xs font-bold text-slate-800 dark:text-slate-200 mt-0.5">
                 {stat.label}
               </span>
-              <span className="text-[10px] text-slate-400 mt-0.5">
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">
                 {stat.subtext}
               </span>
             </div>
